@@ -1,5 +1,8 @@
-var time = 15;
+var time = 16;
 let timer = document.getElementById("timer");
+window.onload = function() {
+    countdown();
+   }
 function countdown() {
     if (time == 0) {
         alert("time up");
