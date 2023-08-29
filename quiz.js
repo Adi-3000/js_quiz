@@ -5,7 +5,7 @@ function countdown() {
         alert("time up");
     }
     else {
-        if(time<5){
+        if(time<=5){
             document.getElementById("timer").style.color="#cf4f4fb9";
         }
         time--;
