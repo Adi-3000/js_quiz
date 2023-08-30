@@ -15,9 +15,11 @@ create2Darr(question,3,4);
 */
 
 var question=[
-    ["what is 2+2","1","2","3","4","4"],
-    ["4+4=??","2","5","8","6",3],
-    ["13-3=??","4","10","14","5","2"]
+    ["what should replace apple which fell on newtons head!","watermelon","papaya","melody","tree","3"],
+    ["how many months have 28 days??","1","2","all of them","depends on leap year","3"],
+    ["who was the first to go to moon from india","krish's stepbro","navazudin siddiki","jaadooo","shaktiman","2"],
+    ["was he blind in end of andhadhun?","yes","no","dont know bcz i was","havent seen","3"],
+    ["rete of shoe in phir hera pheri??","200","150","350","250","2"]
 ];
 //retriving data
 addEventListener("message", e => {

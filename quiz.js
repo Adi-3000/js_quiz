@@ -1,30 +1,41 @@
 var time = 16;
-var pages = 3;
+var pages = 5;
 var qno=0;
 var s = 5;
+var score=0;
 const timer = document.getElementById("timer");
 const cards = document.getElementById("card");
 var shadow;
 let worker;
 var ques;
 var opt;
+var ch;
+var timeout;
 window.onload = function () {
-    add();
+    start();
+}
+function start(){
     qload();
+    add();
     countdown();
 }
 function countdown() {
 
     if (time == 0) {
-        // alert("time up");
+        next();
     }
     else {
         if (time <= 5) {
             timer.style.color = "#cf4f4fb9";
         }
-        time--;
-        timer.innerHTML = time.toString();
-        var timeout = setTimeout('countdown()', 1000);
+        else{
+            timer.style.color = "#3d96e9b9";
+
+        }
+        
+                    time--;
+                    timer.innerHTML = time.toString();
+                    timeout = setTimeout('countdown()', 1000);
     }
 }
 var shadowinit = getComputedStyle(cards).boxShadow;
@@ -41,7 +52,12 @@ function add() {
     shadow = "";
 }
 function next() {
+    if(pages==1){
+        eval();
+        alert("you scored ="+score);
+    }
     if (pages > 0) {
+        eval();
         pages--;
         qno++;
         add();
@@ -55,6 +71,7 @@ function next() {
     }
 
 }
+var ans;
 function qload(){
     //question render process assigned to worker
     worker = new Worker("ques.js")
@@ -68,6 +85,22 @@ function qload(){
         for(var i=0;i+1<5;i++){
             opt[i].innerHTML=q[i+1];
         }
+        ans=q[5];
       }) 
-
+}
+function choice(e){
+  ch=e.id;
+}
+function eval(){
+    if(ch==ans){
+        score++;
+    }
+}as
+function reset(){
+    score=0;
+    qno=0;
+    pages=5;
+    time=16;
+    clearTimeout(timeout);
+    start();
 }
