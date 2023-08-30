@@ -16,7 +16,7 @@
     max-width: 700px;
     background-color: #ffffff;
     border-radius: 12%;
-    box-shadow: rgb(2, 2, 2) 0px 0px 0px 2px inset, rgb(226, 221, 221) 5px -5px 0px -3px, rgb(2, 2, 2) 5px -5px, rgb(226, 221, 221) 10px -10px 0px -3px, rgb(2, 2, 2) 10px -10px, rgb(226, 221, 221) 15px -15px 0px -3px, rgb(2, 2, 2) 15px -15px, rgb(226, 221, 221) 20px -20px 0px -3px, rgb(2, 2, 2) 20px -20px;
+    box-shadow: rgb(2, 2, 2) 0px 0px 0px 2px inset;
     transition: all 0.3s ease;
 }
 
